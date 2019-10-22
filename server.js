@@ -1,23 +1,23 @@
 require('dotenv').config();
 const express = require('express');
 const UserModel = require('./model/user')
-require('./db/db-connect');
+const connectDB = require('./db/db.js');
+const logger = require('./middleware/logger')
+const morgan = require('morgan')
 
 
 const app = express();
-app.use(express.json())
-var user = new UserModel({
-    name:"Test",
-    lastName:"Testic",
-    jmbag:"e414304",
-    password:"test"
+app.use(express.json());
 
-})
+//Connect to database
+connectDB();
 
-user.save((err,res)=>{
-    if(err) return console.error(err);
-    console.log(res)
-});
+
+if(process.env.NODE_ENV === "development")
+{
+    app.use(morgan('dev'));
+
+}
 
 app.use('/api/v1/users',require('./router/router'))
 

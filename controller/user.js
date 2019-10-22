@@ -38,7 +38,7 @@ exports.getUsers = async (req, res) => {
 //@access       Private
 exports.getUser = async ( req,res ) => {
     try {
-        
+        res.status(200).json({status:"success"})
     } catch (error) {
         
     }
@@ -49,7 +49,7 @@ exports.getUser = async ( req,res ) => {
 //@access       Private
 exports.updateUser = async ( req,res ) => {
     try {
-        
+        res.status(200).json({status:"success"})
     } catch (error) {
         
     }
@@ -60,7 +60,7 @@ exports.updateUser = async ( req,res ) => {
 //@access       Private
 exports.deleteUser = async ( req,res ) => {
     try {
-        
+        res.status(200).json({status:"success"})
     } catch (error) {
         
     }

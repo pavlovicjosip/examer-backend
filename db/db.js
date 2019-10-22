@@ -17,7 +17,7 @@ const connectDb = async () => {
     }
 }
 
-connectDb();
+
 
 var db = mongoose.connection;
 
@@ -29,5 +29,5 @@ db.once('open', () => {
     console.log("We are connected")
 })
 
-module.exports = db
+module.exports = connectDb;
 
