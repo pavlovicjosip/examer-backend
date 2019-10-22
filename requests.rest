@@ -1,0 +1,15 @@
+GET http://localhost:3001/users/
+
+
+###
+
+POST http://localhost:3001/users/new
+Content-Type: application/json
+
+{
+  "id":"2",
+  "name": "Josips",
+  "lastName": "",
+  "jmbag":"e414304",
+  "password":"test"
+}
