@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const UserModel = require('./model/user')
+const UserModel = require('./model/User')
 const connectDB = require('./db/db.js');
 const logger = require('./middleware/logger')
 const morgan = require('morgan')
